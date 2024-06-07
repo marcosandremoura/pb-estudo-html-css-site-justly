@@ -1,9 +1,98 @@
 
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+    font-family: 'Playfair Display', sans-serif;
 }
+
+
+
+/* HEADER */
+
+header {
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 240px;
+    background-color: #272d3467;
+    z-index: 1;
+}
+
+.logo {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.logo-img {
+    width: 40%;
+    height: auto;
+}
+
+.logo-text {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.logo-text:hover {
+    color: #cdba6d;
+} 
+
+nav {
+    width: 60%;
+}
+
+Ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li {
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+li:hover {
+    color: #cdba6d;
+    cursor: pointer;
+}
+
+#search-icon {
+    color: #fff;
+    cursor: pointer;
+}
+
+#search-icon:hover {
+    color: #cdba6d
+}
+
+#menu-icon {
+    display: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+
+
+
