@@ -19,6 +19,7 @@
 
 header {
     position: fixed;
+    /* Só pode usar "top", "bottom", "left" e "right", após ter usado o "position". */
     top: 0;
     height: 100px;
     width: 100%;
@@ -27,7 +28,9 @@ header {
     justify-content: space-between;
     padding: 0 240px;
     background-color: #272d3467;
-    z-index: 1;
+    /* Organizar o posicionamento em relação a sobreposição dos elementos. 
+    x(horizontal) y(vertical) z(profundidade) */
+    z-index: 2;
 }
 
 .logo {
@@ -36,6 +39,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* Espaçamento entre os elementos. Para espaçamento vertical usa-se o "row-gap". */
     column-gap: 10px;
 }
 
@@ -46,6 +50,9 @@ header {
 
 .logo-text {
     color: #fff;
+    /* O "html" tem um padrão de "16px" para tamanhos das fontes. 
+    E o "rem" é uma unidade relativa ao tamanho padrão. Então 2rem = 2 x 16px. 
+    Essa é uma boa medida porque trabalha com a proporcionalidade do documento. */
     font-size: 2rem;
 }
 
@@ -81,7 +88,7 @@ li:hover {
 }
 
 #search-icon:hover {
-    color: #cdba6d
+    color: #cdba6d;
 }
 
 #menu-icon {
@@ -90,6 +97,91 @@ li:hover {
     color: #fff;
     cursor: pointer;
 }
+
+
+
+/* HOME CONTAINER */
+
+.modal {
+    width: 100%;
+    /* O "vh" é a altura da tela do usuário. */
+    /* E o "vw" é a largura da tela do usuário.  */
+    /* 130vh = 130% da altura da tela do usuário */
+    height: 130vh;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.home-container {
+    background-image: url(./assets/background.jpg);
+    background-size: cover;
+    /* Alinhamento vertical e horizontal  */
+    background-position: 50% 50%;
+    width: 100%;
+    height: 130vh;
+    display: flex;
+    justify-content: center;
+}
+
+.presentation-container {
+    width: 50%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5vh;
+    margin-top: 150px;
+    padding: 10px;
+    color: #fff;
+    z-index: 1;
+}
+
+.presentation-container h3 {
+    letter-spacing: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.presentation-container h1 {
+    font-size: 5rem;
+    text-align: center;
+}
+
+.presentation-container span {
+    color: #cdba6d;
+}
+
+.presentation-container p {
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.presentation-container button {
+    width: 150px;
+    height: 50px;
+    background-color: transparent;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    border: 2px solid #c8b050;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.presentation-container button:hover {
+    background-color: #cdba6d;
+    color: #000;
+}
+
+
+
+
+
+
+
+
 
 
 
